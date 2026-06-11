@@ -11,8 +11,9 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
+// TODO
 }
+
 
 /**
  * @param {string} word - The word to repeat.
