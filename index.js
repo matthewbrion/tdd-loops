@@ -11,9 +11,13 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-// TODO
+  let string = ""
+  for (let i = 0; i < n; i++) {
+    string = string + word
+  }
+  return string
 }
-
+console.log(echo("cheese", 4))
 
 /**
  * @param {string} word - The word to repeat.
@@ -28,8 +32,17 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
-  // TODO
+  let string = ""
+  for (let i = 0; i < n; i++) {
+    if (i !== n-1) {
+      string = string + word + " "
+    } else {
+      string = string + word
+    }
+  }
+  return string
 }
+console.log(echoWithSpace("cheese", 5))
 
 /**
  * @param {number} n - The number to stop at
@@ -43,8 +56,13 @@ export function echoWithSpace(word, n) {
  * sumTo(100); // 5050
  */
 export function sumTo(n) {
-  // TODO
+  let sum = 0
+  for (let i = 0; i <= n; i++) {
+    sum = sum + i
+  }
+  return sum
 }
+console.log(sumTo(9))
 
 /**
  * @param {number} a - The starting integer.
@@ -59,8 +77,13 @@ export function sumTo(n) {
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+  let sum = 0
+  for (let i = a; i <= z; i++) {
+    sum = sum + i
+  }
+  return sum
 }
+console.log(sumFromTo(1, 3))
 
 /**
  * Counts down from n to 1, inclusive, by logging each number to the console.
@@ -74,8 +97,11 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  // TODO
+  for (let i = n; i >= 1; i--){
+    console.log(i)
+  }
 }
+countdown(10)
 
 /**
  * @param {number} n - The ending number.
@@ -89,8 +115,13 @@ export function countdown(n) {
  * sumOddsToN(1); // 1
  */
 export function sumOddsToN(n) {
-  // TODO
+  let sumOdd = 0
+  for (let i = 1; i <= n; i = i + 2) {
+    sumOdd = sumOdd + i
+  }
+  return sumOdd
 }
+console.log(sumOddsToN(13))
 
 /**
  * A petri dish starts with a certain number of bacteria cells.
