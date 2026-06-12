@@ -140,8 +140,13 @@ console.log(sumOddsToN(13))
  * getGrowthTime(5, 78); // 80
  */
 export function getGrowthTime(start, target) {
-  // TODO
+  if (start > 0) {
+  return Math.log2(target/start)*20
+  } else {
+  return undefined
+  }
 }
+console.log(getGrowthTime(1, 8))
 
 /**
  * The amount of money in a savings account grows by a certain rate every year.
@@ -206,5 +211,16 @@ export function moveWater(colander, bucket) {
  * fizzbuzz(15); // logs 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
  */
 export function fizzbuzz(n) {
-  // TODO
+  for (let i = 1; i <= n; i++) {
+    if (i%3 == 0 && i%5 == 0) {
+      console.log("fizzbuzz")
+    } else if (i%5 == 0) {
+     console.log("buzz")
+    } else if (i%3 == 0) {
+     console.log("fizz")
+    } else {
+      console.log(i)
+    }
+  }
 }
+fizzbuzz(35)
